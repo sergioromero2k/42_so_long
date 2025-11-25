@@ -10,5 +10,5 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <fcntl.h>
-
+#include <math.math.h>
 #endif
