@@ -29,7 +29,7 @@ Consejos:
 * Añade los directorios `src/` y `include/.`
 * Más adelante agregarás MiniLibX al Makefile.
 
-#### Paso 2 — Diseño de la Estructura del Juego (Modelo)
+### Paso 2 — Diseño de la Estructura del Juego (Modelo)
 1. Crea `so_long.h`
 
 Aquí defines:
@@ -61,7 +61,7 @@ Objetos:
 * punteros a las imágenes
 **Consejo**: inicializa la estructura siempre a cero.
 
-#### Paso 3 — Lectura del Mapa
+### Paso 3 — Lectura del Mapa
 ##### Objetivo:
 Leer el archivo `.ber` y construir el char `**map.`
 La función de lectura debe:
@@ -80,7 +80,7 @@ Recomendación:
 
 Asegúrate de que el mapa no está vacío.
 
-#### Paso 4 — Validación Completa del Mapa
+### Paso 4 — Validación Completa del Mapa
 Aquí se cometen el 90% de los errores, así que tómate tu tiempo.
 Debes crear varias funciones de validación:
 
@@ -168,42 +168,6 @@ Tu main debe seguir este orden:
 
 ##### ✔ No uses números mágicos
 Usa constantes o comentarios claros.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Holy Graph M-03
