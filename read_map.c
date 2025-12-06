@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serromer <serromer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 17:22:41 by serromer          #+#    #+#             */
+/*   Updated: 2025/12/06 18:03:35 by serromer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "get_next_line.h"
 #include "so_long.h"
@@ -27,6 +39,8 @@ void	read_map(char *filepath, t_game *game)
 	game->height = rows;
 	if (game->map[0])
 		game->width = ft_strlen(game->map[0]) - 1;
+	if ((game->height) > (game->width))
+		return (ft_error("El mapa debe ser cuadrado"));
 }
 
 int	append_line(char **arr, const char *line)
@@ -55,18 +69,4 @@ int	append_line(char **arr, const char *line)
 	if (arr)
 		free(arr);
 	return (NULL);
-}
-
-int	main(int argc, char *argv[])
-{
-	char	*ptr;
-
-	if (argc != 2)
-	{
-		ft_printf("Número incorrecto de argumento, Uso: ./so_long <mapa.ber>");
-		return (EXIT_FAILURE);
-	}
-	if (!check_bet_extension(argv[1]))
-		ft_error("La extensión del mapa debe ser .ber");
-	return (0);
 }

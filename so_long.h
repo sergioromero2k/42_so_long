@@ -26,5 +26,5 @@ typedef struct s_game
 
 void		ft_error(char *msg);
 int			check_bet_extension(char *filename);
-
+void		validate_shape(char **map);
 #endif

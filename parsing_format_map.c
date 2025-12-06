@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_format_map.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serromer <serromer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 17:25:31 by serromer          #+#    #+#             */
+/*   Updated: 2025/12/06 17:26:10 by serromer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "so_long.h"
 
@@ -8,6 +20,7 @@ void	ft_error(char *msg)
 	write(2, "\n", 1);
 	exit(EXIT_FAILURE);
 }
+
 int	check_bet_extension(char *filename)
 {
 	size_t	len;
