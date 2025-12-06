@@ -1,21 +1,21 @@
+#include "ft_printf.h"
 #include "so_long.h"
 
-int	main(int argc, char *argv[])
+void	ft_error(char *msg)
 {
-	char	*ptr;
+	write(2, "Error\n", 6);
+	write(2, msg, ft_strlen(msg));
+	write(2, "\n", 1);
+	exit(EXIT_FAILURE);
+}
+int	check_bet_extension(char *filename)
+{
+	size_t	len;
 
-	if (argc != 2)
-		return (printf("Error p"), EXIT_FAILURE);
-	ptr = &(*argv[1]);
-	while (*ptr != '.')
-		ptr++;
-	ptr++;
-	if (*ptr != 'b')
-		return (printf("Error b"), EXIT_FAILURE);
-	ptr++;
-	if (*ptr != 'e')
-		return (printf("Error e"), EXIT_FAILURE);
-	ptr++;
-	if (*ptr != 'r')
-		return (printf("Error r"), EXIT_FAILURE);
+	len = ft_strlen(filename);
+	if (len <= 4)
+		return (EXIT_FAILURE);
+	if (ft_strncmp(filename + len - 4, ".ber" == 0))
+		return (1);
+	return (EXIT_FAILURE);
 }

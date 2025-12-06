@@ -6,20 +6,12 @@
 /*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 20:49:50 by sergio-alej       #+#    #+#             */
-/*   Updated: 2025/11/22 20:56:35 by sergio-alej      ###   ########.fr       */
+/*   Updated: 2025/12/03 03:04:49 by sergio-alej      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
-# include <limits.h>
-# include <stdarg.h>
-# include <stdint.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
 
 void	ft_putchar(char c, int *count);
 void	ft_putstr(char *s, int *count);
