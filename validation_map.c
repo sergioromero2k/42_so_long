@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation_map.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: serromer <serromer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 17:24:14 by serromer          #+#    #+#             */
-/*   Updated: 2025/12/06 18:23:56 by serromer         ###   ########.fr       */
+/*   Updated: 2025/12/09 16:33:32 by sergio-alej      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,31 +32,7 @@ void	validate_shape(char **map)
 	}
 }
 
-void	validate_walls(char **map)
-{
-	int	i;
-	int	contador;
 
-	i = 0;
-	contador = 0;
-	if (!map[0])
-		return (ft_error("Error primera fila mapa"));
-	while (map[0][i])
-	{
-		if (map[0][i] != '1')
-			return (ft_error("Primera columna debe ser pura 1"));
-		i++;
-	}
-	while (map[contador] != NULL)
-		contador++;
-	i = 0;
-	while (map[contador][i])
-	{
-		if (map[contador][i] != '1')
-			return (ft_error("Ultima columna debe ser puro 1"));
-		i++;
-	}
-}
 
 void	validate_components(char **map)
 {
