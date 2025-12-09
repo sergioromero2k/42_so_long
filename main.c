@@ -57,6 +57,10 @@ int	append_line(char **arr, const char *line)
 	return (NULL);
 }
 
+int valitation_shape(char **map){
+
+}
+
 int	main(int argc, char *argv[])
 {
 	char	*ptr;
