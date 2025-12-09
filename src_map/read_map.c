@@ -6,12 +6,13 @@
 /*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 17:22:41 by serromer          #+#    #+#             */
-/*   Updated: 2025/12/09 16:18:36 by sergio-alej      ###   ########.fr       */
+/*   Updated: 2025/12/09 16:49:19 by sergio-alej      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "get_next_line.h"
+#include "libft.h"
 #include "so_long.h"
 
 void	read_map(char *filepath, t_game *game)
