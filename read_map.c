@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 17:22:41 by serromer          #+#    #+#             */
+/*   Updated: 2025/12/09 15:27:02 by sergio-alej      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "get_next_line.h"
 #include "so_long.h"
@@ -27,6 +39,8 @@ void	read_map(char *filepath, t_game *game)
 	game->height = rows;
 	if (game->map[0])
 		game->width = ft_strlen(game->map[0]) - 1;
+	if ((game->height) > (game->width))
+		return (ft_error("El mapa debe ser cuadrado"));
 }
 
 int	append_line(char **arr, const char *line)
@@ -55,10 +69,6 @@ int	append_line(char **arr, const char *line)
 	if (arr)
 		free(arr);
 	return (NULL);
-}
-
-int valitation_shape(char **map){
-
 }
 
 int	main(int argc, char *argv[])

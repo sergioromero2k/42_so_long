@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   example.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
+/*   By: serromer <serromer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 07:17:04 by sergio-alej       #+#    #+#             */
-/*   Updated: 2025/12/06 07:32:05 by sergio-alej      ###   ########.fr       */
+/*   Updated: 2025/12/06 17:57:01 by serromer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ int	main(void)
 	char	*map[] = {"#######", "#  P  #", "#     #", "#######", NULL};
 
 	print_map(map);
-    printf("\n");
-    read_map_chars(map);
+	printf("\n");
+	read_map_chars(map);
 }
