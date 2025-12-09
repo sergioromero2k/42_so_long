@@ -6,7 +6,7 @@
 /*   By: sergio-alejandro <sergio-alejandro@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 16:33:02 by sergio-alej       #+#    #+#             */
-/*   Updated: 2025/12/09 16:40:57 by sergio-alej      ###   ########.fr       */
+/*   Updated: 2025/12/09 16:46:15 by sergio-alej      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	validate_walls(char **map)
 	while (map[0][i])
 	{
 		if (map[0][i] != '1')
-			ft_error("Error: The first row isn't a complete wall");
+			ft_error("Error: The first row isn't a complete wall. ");
 		i++;
 	}
 	last_col = i - 1;
@@ -33,12 +33,13 @@ void	validate_walls(char **map)
 	while (map[last_row + 1] != NULL)
 		last_row++;
 	i = 0;
-	while (map[contador][i])
+	while (map[last_row][i])
 	{
-		if (map[contador][i] != '1')
-			return (ft_error("Ultima columna debe ser puro 1"));
+		if (map[last_row][i] != '1')
+			ft_error("Error: The last col ins't a complete wall. ");
 		i++;
 	}
+	validate_col(map, last_col);
 }
 
 void	validate_col(char **map, int last_col)
